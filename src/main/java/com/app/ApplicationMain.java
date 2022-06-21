@@ -1,15 +1,15 @@
-package com.example.demo;
+package com.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.example")
-public class DemoApplication {
+@ComponentScan(basePackages = "com.app")
+public class ApplicationMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ApplicationMain.class, args);
 	}
 
 }
