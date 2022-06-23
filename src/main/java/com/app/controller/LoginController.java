@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 	Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-	@GetMapping("/getMessage")
-	public String getMessage() {
-		logger.info(" Loggin controller getMessage method ");
-		return "this is docker intgeration demo";
-	}
+	@GetMapping
+    public String helloWorld() {
+        return "Hello World";
+    }
 
 }
