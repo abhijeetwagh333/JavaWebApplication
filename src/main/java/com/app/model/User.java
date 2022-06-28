@@ -1,19 +1,21 @@
 package com.app.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
+@Builder
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
 
-	private long id;
-	private String name;
-	private String email;
-	private String password;
+	long id;
+	String name;
+	String email;
+	String password;
 
 }
