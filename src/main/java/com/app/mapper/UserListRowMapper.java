@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import com.app.model.User;
 
-public class UserRowMapper implements RowMapper<User> {
+public class UserListRowMapper implements RowMapper<User> {
 
 	@Override
 	public User mapRow(ResultSet rs, int rowNum) throws SQLException {

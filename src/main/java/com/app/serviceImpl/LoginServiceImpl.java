@@ -1,6 +1,7 @@
 package com.app.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,14 +18,17 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public List<User> getAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		return loginRepository.getAllUsers();
 	}
 
 	@Override
-	public User getUserById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<User> getUserById(String id) {
+		return loginRepository.getUserById(id);
+	}
+
+	@Override
+	public Optional<User> getUserByName(String userName) {
+		return loginRepository.getUserById(userName);
 	}
 
 }

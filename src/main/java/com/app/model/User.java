@@ -1,5 +1,10 @@
 package com.app.model;
 
+import java.io.Serializable;
+import java.util.Set;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,11 +16,11 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
-	long id;
-	String name;
-	String email;
-	String password;
-
+@JacksonXmlRootElement(namespace = "userlist")
+public class User implements Serializable {
+	private long id;
+	private String name;
+	private String email;
+	private String password;
+	private Set<Role> roles;
 }
